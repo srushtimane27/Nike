@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+}
+.screen{
+    width: 99%;
+    height: 800px;
+    margin: auto;
+    border: 2px solid red;
+}
+.login{
+    width: 50%;
+    height: 800px;
+    border: 2px solid black;
+    margin: auto;
+}
