@@ -43,17 +43,17 @@ const Register = () => {
   return (
     <div className='screen'>
       <div className='form'>
-        <h1>Create An Account</h1>
+        <h1 className='title'>Sign in</h1>
         <form onSubmit={handleSubmit}>
-          <label>Name : </label><br />
-          <input type="text" name='name' required onChange={handleChange} /><br/>
+          <label className='text'>Name : </label><br />
+          <input className='box' type="text" name='name' required onChange={handleChange} /><br/>
           <label>Email : </label><br />
-          <input type="email" name='email' required onChange={handleChange} /><br/>
+          <input className='box'  type="email" name='email' required onChange={handleChange} /><br/>
           <label>Password : </label><br />
-          <input type="password" name='password' required  onChange={handleChange}/><br />
+          <input className='box'  type="password" name='password' required  onChange={handleChange}/><br />
           <label>Confirm Password : </label><br />
-          <input type="password" name='confirmPassword' required onChange={handleChange} /><br />
-          <input type="submit" value="Register" />
+          <input className='box'  type="password" name='confirmPassword' required onChange={handleChange} /><br />
+          <input className='button' type="submit" value="Register" />
         </form>
       </div>
     </div>

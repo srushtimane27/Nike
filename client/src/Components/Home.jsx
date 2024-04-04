@@ -1,11 +1,12 @@
 import React from 'react'
 import "./../Home.css";
 import "./../Script.js";
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const router = useNavigate();
     const registerPage = useNavigate();
+    const loginPage = useNavigate();
 
     async function redirect(){
         router(`/shop`)
@@ -13,6 +14,9 @@ const Home = () => {
 
     async function registerRedirect(){
         registerPage(`/register`)
+    }
+    async function loginRedirect(){
+        loginPage(`/login`)
     }
 
 
@@ -25,7 +29,9 @@ const Home = () => {
             <div>Find a Store |</div>
             <div>Help |</div>
             <div>Join Us |</div>
-            <div onClick={()=>registerRedirect()}>Sign In </div>
+            <div onClick={()=>registerRedirect()}>Sign In |</div>
+            <div onClick={()=>loginRedirect()}>Log In </div>
+            
             </div>
         </div>
         <div id="nav-two">

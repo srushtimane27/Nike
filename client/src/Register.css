@@ -10,13 +10,41 @@
 }
 .screen{
     width: 99%;
-    height: auto;
+    height: 500px;
     margin: auto;
     border: 2px solid red;
+    /* background-color: rgb(245, 245, 245); */
+    
 }
 .form{
-    width: 50%;
+    width: 30%;
     height: 700px;
     border: 2px solid yellow;
     margin: auto;
+    margin-top: 40px;
+    /* background-color: rgb(237, 232, 232); */
+    
+}
+.title{
+    font-size: 35px;
+    margin-top: 20px;
+}
+.text{
+    font-size: 20px;
+    
+}
+.box{
+    width: 50%;
+    height: 50px;
+    border-radius: 12px;
+    border-color: rgb(22, 21, 21);
+    box-sizing: border-box;
+}
+.button{
+    width: 80px;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
 }

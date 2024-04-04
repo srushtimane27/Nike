@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import "./../shop.css"
 import "./../Script.js";
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Shop = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -49,7 +49,7 @@ const Shop = () => {
 
           <div className='nav-two'>
           <div id="nav-two-left">
-                <img className="w-h-100" src="https://media.designrush.com/inspiration_images/134805/conversions/_1512076803_93_Nike-preview.jpg" alt=""/>
+                <img className="w-h-100" src="https://media.designrush.com/inspiration_images/134805/conversions/_1512076803_93_Nike-preview.jpg" alt='nike' />
             </div>
             <div id="nav-two-mid">
                 <div>New & Featured</div>
@@ -69,7 +69,7 @@ const Shop = () => {
              <div className='all-products'>
               {allProducts.map((productObj) => (
                 <div onClick={()=>redirect(productObj.id)} className='single-product'>
-                  <img className='pro-img' src={productObj.image} />
+                  <img className='pro-img' src={productObj.image} alt='nike' />
                   <h4 className='pro-title'>{productObj.title}</h4>
                   <h3 className='pro-price'>MRP : ₹{productObj.price}</h3>
                 </div>

@@ -39,7 +39,7 @@ const SingleProduct = () => {
 
                 <div className='nav-two'>
                     <div id="nav-two-left">
-                        <img className="w-h-100" src="https://media.designrush.com/inspiration_images/134805/conversions/_1512076803_93_Nike-preview.jpg" alt="" />
+                        <img className="w-h-100" src="https://media.designrush.com/inspiration_images/134805/conversions/_1512076803_93_Nike-preview.jpg" alt='nike'/>
                     </div>
                     <div id="nav-two-mid">
                         <div>New & Featured</div>
@@ -58,7 +58,7 @@ const SingleProduct = () => {
           
             <div className='single'>
                <div className='img-col'>
-                   <img className='single-img' src={productData?.image} />
+                   <img className='single-img' src={productData?.image} alt='nike' />
                </div>
                 <div className='desc-col'>
                 <h4 className='single-title'>{productData?.title}</h4>
