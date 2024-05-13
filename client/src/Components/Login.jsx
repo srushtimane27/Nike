@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './../Login.css'
+import axios from 'axios';
 
 const Login = () => {
   const router = useNavigate();
@@ -17,7 +18,8 @@ const Login = () => {
     event.preventDefault();
     if(loginData.email && loginData.password){
       try {
-        const response = {data: {success : true, message:"Login Successfull"}}
+        // const response = {data: {success : true, message:"Login Successfull"}}
+        const response = await axios.post('http://localhost:3002/login', {loginData}, {withCrentials: true})
         if(response.data.success === true){
           alert(response.data.message)
           setLoginData({email:"",password:""})

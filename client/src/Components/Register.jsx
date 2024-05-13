@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './../Register.css'
+import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
@@ -18,7 +19,8 @@ const Register = () => {
     if(userData.name && userData.email && userData.password && userData.confirmPassword){
       if(userData.password === userData.confirmPassword){
         try {
-          const response = { data : {success : true, message: "Registration Completed"}}
+          // const response = { data : {success : true, message: "Registration Completed"}}
+          const response = await axios.post('http://localhost:3002/register', {userData}, {withCredentials: true})
 
           if(response.data.success === true){
             alert(response.data.message)
