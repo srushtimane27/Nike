@@ -20,7 +20,7 @@ const Register = () => {
       if(userData.password === userData.confirmPassword){
         try {
           // const response = { data : {success : true, message: "Registration Completed"}}
-          const response = await axios.post('http://localhost:3002/register', {userData}, {withCredentials: true})
+          const response = await axios.post('http://localhost:3001/register', {userData}, {withCredentials: true})
 
           if(response.data.success === true){
             alert(response.data.message)

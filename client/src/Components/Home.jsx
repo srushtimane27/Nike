@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./../Home.css";
 import "./../Script.js";
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from './AuthContext/AuthContextComponent.js';
 
 const Home = () => {
     const router = useNavigate();
     const registerPage = useNavigate();
     const loginPage = useNavigate();
+
+    const {state} = useContext(AuthContext);
+    console.log(state, "state")
 
     async function redirect(){
         router(`/shop`)
@@ -46,11 +50,13 @@ const Home = () => {
                 <div>Sale</div>
                 <div>Customise</div>
                 <div>SNKRS</div>
+                
             </div>
             <div id="nav-two-right">
                  <div><i className="fa-solid fa-magnifying-glass"></i></div>
                  <div><i className="fa-regular fa-heart"></i></div>
                  <div><i className="fa-solid fa-cart-shopping"></i></div>
+                 <h3>Welcome - {state?.user?.name}</h3>
             </div>
         </div>
         <div id="nav-three">
