@@ -5,6 +5,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import Shop from './Components/Shop';
 import SingleProduct from './Components/SingleProduct';
+import AddProduct from './Components/AddProduct';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='login' element={<Login/>}/>
         <Route path='shop' element={<Shop/>}/>
         <Route path='single-product/:id' element={<SingleProduct/>}/>
+        <Route path='add-product' element={<AddProduct/>}/>
       </Routes>
     </div>
   );

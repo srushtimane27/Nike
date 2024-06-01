@@ -3,13 +3,14 @@ import "./../Home.css";
 import "./../Script.js";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthContext/AuthContextComponent.js';
+import axios from 'axios';
 
 const Home = () => {
     const router = useNavigate();
     const registerPage = useNavigate();
     const loginPage = useNavigate();
+    const {state, LOGOUT} = useContext(AuthContext);
 
-    const {state} = useContext(AuthContext);
     console.log(state, "state")
 
     async function redirect(){
@@ -23,6 +24,17 @@ const Home = () => {
         loginPage(`/login`)
     }
 
+    async function Logout(){
+        try {
+            const response = await axios.get('http://localhost:3001/api/v1/user/logout')
+            if(response.data.success){
+                LOGOUT();
+                alert.success(response.data.message)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
   return (
     <div>
@@ -34,7 +46,7 @@ const Home = () => {
             <div>Help |</div>
             <div>Join Us |</div>
             <div onClick={()=>registerRedirect()}>Sign In |</div>
-            <div onClick={()=>loginRedirect()}>Log In </div>
+            <div onClick={Logout}>Logout</div>: <div onClick={()=>loginRedirect()}>Log In </div> 
             
             </div>
         </div>

@@ -103,3 +103,13 @@ export const validateToken =  async(req,res) => {
     }
 
 };
+
+export const logout = async(req,res) => {
+    try {
+        res.cookie("token", "");
+        return res.json({success: true, message: "Logout Successfull"})
+    } catch (error) {
+        console.log(error, "error");
+        return res.json({error, success: false})
+    }
+}
