@@ -67,7 +67,7 @@ export const login = async(req,res) => {
 export const validateToken =  async(req,res) => {
     try {
         const token = req?.cookies?.token;
-        console.log(token,"token from validate token")
+        // console.log(token,"token from validate token")
         if(!token){
             return res.json({
                 success: false,

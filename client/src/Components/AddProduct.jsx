@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { AuthContext } from './AuthContext/AuthContextComponent';
 
 const AddProduct = () => {
-    const [productData, setProductData] = useState({tags:"",name: "",type: "", colour: "" })
+    const [productData, setProductData] = useState({tags:"",name: "",type: "", colour: "", price: "" })
     console.log(productData, "ProductData");
 
     const handleChange = (event) => {
@@ -16,7 +16,7 @@ const AddProduct = () => {
     const handleSubmit = async (event) => {
         try {
             event.preventDefault();
-            const response = await axios.post("http://localhost:3001/api/v1/user/add-product", {productData})
+            const response = await axios.post("http://localhost:3001/api/v1/product/add-product", {productData})
             if(response.data.success){
                 alert(response.data.message)
             }
@@ -25,21 +25,20 @@ const AddProduct = () => {
         }
     }
 
-
   return (
     <div>
         <h1>Add Product</h1>
         <form onSubmit={handleSubmit}>
             <label>Tags:</label><br />
-            <input required onChange={handleChange}/><br />
+            <input required name='tags' onChange={handleChange}/><br />
             <label>Product Name:</label><br />
-            <input required onChange={handleChange}/><br />
+            <input required name='name' onChange={handleChange}/><br />
             <label>Product Type:</label><br />
-            <input required onChange={handleChange}/><br />
+            <input required name='type' onChange={handleChange}/><br />
             <label>Colour</label><br />
-            <input required onChange={handleChange}/><br />
+            <input required name='colour' onChange={handleChange}/><br />
             <label>Price</label><br />
-            <input required onChange={handleChange}/><br />
+            <input required name='price' onChange={handleChange}/><br />
             <input type="submit" />
         </form>
     </div>
