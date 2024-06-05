@@ -20,3 +20,13 @@ export const addProduct = async (req,res) => {
         return res.json({success: false, error})
     }
 }
+
+export const getAllProducts = async (req,res) => {
+    try {
+        const products = await ProductSchema.find({});
+        return res.json({success: true, products});
+    } catch (error) {
+        console.log(error, "error");
+        return res.json({error, success: false});
+    }
+};

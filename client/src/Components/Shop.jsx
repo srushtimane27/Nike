@@ -5,17 +5,16 @@ import "./../Script.js";
 import { useNavigate } from 'react-router-dom';
 
 const Shop = () => {
-  const [allProducts, setAllProducts] = useState([]);
-
   const router = useNavigate();
 
-  async function getProducts(){
+  const [allProducts, setAllProducts] = useState([]);
 
+  async function getProducts(){
     try {
-      const response = await axios.get('https://fakestoreapi.com/products');
-      console.log(response, "response from fake store api")
-      if(response?.data.length){
-        setAllProducts(response.data)
+      // const response = await axios.get('https://fakestoreapi.com/products');
+      const response = await axios.get('http://localhost:3001/api/v1/product/get-all-products')
+      if(response?.data.success){
+        setAllProducts(response.data.products)
       }
       
     } catch (error) {
@@ -69,9 +68,11 @@ const Shop = () => {
              <div className='all-products'>
               {allProducts.map((productObj) => (
                 <div onClick={()=>redirect(productObj.id)} className='single-product'>
-                  <img className='pro-img' src={productObj.image} alt='nike' />
-                  <h4 className='pro-title'>{productObj.title}</h4>
-                  <h3 className='pro-price'>MRP : ₹{productObj.price}</h3>
+                  <h3>{productObj.tags}</h3>
+                  <h3>{productObj.name}</h3>
+                  <h3>{productObj.type}</h3>
+                  <h3>{productObj.colour}</h3>
+                  <h3>{productObj.price}</h3>
                 </div>
               ))}
              </div> : <div>Loading...</div>}

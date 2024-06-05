@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react'
 import { AuthContext } from './AuthContext/AuthContextComponent';
+import AuthDirection from './Redirections/AuthDirection';
 
 const AddProduct = () => {
     const [productData, setProductData] = useState({tags:"",name: "",type: "", colour: "", price: "" })
@@ -16,7 +17,7 @@ const AddProduct = () => {
     const handleSubmit = async (event) => {
         try {
             event.preventDefault();
-            const response = await axios.post("http://localhost:3001/api/v1/product/add-product", {productData})
+            const response = await axios.post('http://localhost:3001/api/v1/product/add-product', {productData})
             if(response.data.success){
                 alert(response.data.message)
             }
@@ -26,7 +27,7 @@ const AddProduct = () => {
     }
 
   return (
-    <div>
+    <AuthDirection>
         <h1>Add Product</h1>
         <form onSubmit={handleSubmit}>
             <label>Tags:</label><br />
@@ -41,7 +42,7 @@ const AddProduct = () => {
             <input required name='price' onChange={handleChange}/><br />
             <input type="submit" />
         </form>
-    </div>
+    </AuthDirection>
   )
 }
 

@@ -4,8 +4,8 @@ import jwt from "jsonwebtoken";
 
 export const register = async(req,res) => {
     try {
-        const { name, email, password, confirmPassword } = req.body.userData;
-        if(!name || !email || !password || !confirmPassword){
+        const { name, email, password, confirmPassword, role } = req.body.userData;
+        if(!name || !email || !password || !confirmPassword || !role){
             return res.json({success: false, message: "All Fields Are Required "})
         }
         if(password !== confirmPassword){
@@ -22,6 +22,7 @@ export const register = async(req,res) => {
             name,
             email, 
             password: hashedPassword,
+            role: role,
         })
         await newUser.save();
         return res.json({success: true,  message:"Registration Completed"})
