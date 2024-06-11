@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './../Login.css'
 import axios from 'axios';
 import { AuthContext } from './AuthContext/AuthContextComponent';
 
 const Login = () => {
-  const {LOGIN} = useContext(AuthContext);
+  const {LOGIN, state} = useContext(AuthContext);
 
   const router = useNavigate();
 
@@ -39,6 +39,19 @@ const Login = () => {
       alert("All Fields Are Required")
     }
   }
+
+  useEffect(() => {
+    console.log(state)
+    if(state && state?.user?.role !== undefined){
+        if(state?.user.role === 'buyer'){
+            router("/");
+        } else {
+            router("/add-product")
+        }
+    }
+}, [state])
+
+
   return (
     <div className='screen'>
       <div className='login'>

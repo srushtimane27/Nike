@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react'
 import { AuthContext } from './AuthContext/AuthContextComponent';
 import AuthDirection from './Redirections/AuthDirection';
+import SellerProtected from './Redirections/SellerProtected';
 
 const AddProduct = () => {
     const [productData, setProductData] = useState({tags:"",name: "",type: "", colour: "", price: "" })
@@ -27,7 +28,7 @@ const AddProduct = () => {
     }
 
   return (
-    <AuthDirection>
+    <SellerProtected>
         <h1>Add Product</h1>
         <form onSubmit={handleSubmit}>
             <label>Tags:</label><br />
@@ -42,7 +43,7 @@ const AddProduct = () => {
             <input required name='price' onChange={handleChange}/><br />
             <input type="submit" />
         </form>
-    </AuthDirection>
+    </SellerProtected>
   )
 }
 

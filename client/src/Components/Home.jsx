@@ -46,8 +46,7 @@ const Home = () => {
             <div>Help |</div>
             <div>Join Us |</div>
             <div onClick={()=>registerRedirect()}>Sign In |</div>
-            <div onClick={Logout}>Logout</div>: <div onClick={()=>loginRedirect()}>Log In </div> 
-            
+            {state?.user?.role? <div onClick={Logout}>Logout</div> : <div onClick={()=>loginRedirect()}>Login</div>}      
             </div>
         </div>
         <div id="nav-two">
@@ -68,7 +67,7 @@ const Home = () => {
                  <div><i className="fa-solid fa-magnifying-glass"></i></div>
                  <div><i className="fa-regular fa-heart"></i></div>
                  <div><i className="fa-solid fa-cart-shopping"></i></div>
-                 <h3>Welcome - {state?.user?.name}</h3>
+                 <h3 id='user-name'>Welcome - {state?.user?.name}</h3>
             </div>
         </div>
         <div id="nav-three">
@@ -94,7 +93,6 @@ const Home = () => {
         </div>
         <div id="feat-shop">
             <div id="featured">Featured</div>
-            <div id="shop">Shop</div>
         </div>
         <div id="featured-img">
             <div id="img-box">

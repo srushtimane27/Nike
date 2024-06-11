@@ -35,7 +35,7 @@ export const register = async(req,res) => {
 
 export const login = async(req,res) => {
     try {
-        const {email, password} = req.body.userData;
+        const {email, password,} = req.body.userData;
         if(!email || !password){
             return res.json({success: false, message: "All Fields Are Required"})
         }
@@ -57,7 +57,7 @@ export const login = async(req,res) => {
         console.log(token, "token")
         res.cookie("token", token)
 
-        return res.json({success: true, message: "Login Successfull", userData: {name: user.name, email: user.email, },})
+        return res.json({success: true, message: "Login Successfull", userData: {name: user.name, email: user.email, role: user.role, _id: user._id},})
     } catch (error) {
         console.log(error, "error")
         return res.json({error, success: false});
@@ -112,5 +112,117 @@ export const logout = async(req,res) => {
     } catch (error) {
         console.log(error, "error");
         return res.json({error, success: false})
+    }
+}
+
+export const addToCart = async (req,res) => {
+    try {
+        const {userId, productId} = req.body;
+        console.log(userId, productId);
+        const user = await UserSchema.findByIdAndUpdate(
+            userId,
+            {
+                $addToSet: {cart: productId}
+            },
+            {
+                new: true
+            }
+        );
+        if(!user){
+            return res.json({success: false, message: "User not found"})
+        }
+        console.log(user, "user")
+        return res.json({success: true, message: "Product Successfully added to cart"})
+    } catch (error) {
+        console.log(error, "error");
+        return res.json({error, success: false});
+    }
+}
+
+export const showCart = async(req,res) => {
+    try {
+        const {userId} = req.body;
+        const user = await UserSchema.findById(userId).populate('cart');
+        if(!user){
+            return res.json({success: false, message: "User Not Found"})
+        }
+        return res.json({success: true, cart: user.cart})
+    } catch (error) {
+        console.log(error)
+        return res.json({error, success: false});
+    }
+}
+
+export const removeFromcart = async(req,res) => {
+    try {
+        const {userId, productId}= req.body;
+        const user = await UserSchema.findByIdAndUpdate(
+            userId,
+            {$pull : {cart: productId}},
+            {new: true}
+        );
+        if(!user){
+            return res.json({success: false, message: "User Not Found"})
+        }
+        return res.json({success: true, message: "Product removed from cart", cart: user.cart})
+    } catch (error) {
+        console.log(error)
+        return res.json({success: false, error});
+    }
+}
+
+export const addToWishList = async(req,res) => {
+    try {
+        const { userId, productId } = req.body;
+        console.log(userId, productId);
+        const user = await UserSchema.findByIdAndUpdate(
+            userId,
+            {
+                $addToSet: {wishlist: productId}
+            },
+            {
+                new: true
+            }
+        );
+        if(!user){
+           return res.json({success: false, message: "User Not Found"})
+        }
+        console.log(user, "user")
+        return res.json({success: true, message: "Product Successfully added to wishlist"})
+    } catch (error) {
+        console.log(error, "error");
+        return res.json({error, success: false});
+    }
+}
+
+export const showWishlist = async(req,res) => {
+    try {
+        const { userId } = req.body;
+        const user = await UserSchema.findById(userId).populate('wishlist');
+        if(!user){
+            return res.json({success: false, message: "User Not Found"})
+        }
+        return res.json({success: true, wishlist: user.wishlist})
+    } catch (error) {
+        console.log(error)
+        return res.json({error, success: false});
+    }
+}
+
+export const removeFromWishlist = async(req,res) => {
+    try {
+        const {userId, productId} = req.body;
+        const user = await UserSchema.findByIdAndUpdate(
+            userId,
+            {$pull : {cart: productId}},
+            {new: true}
+        );
+        if(!user){
+            return res.json({success: false, message: "User Not Found"})
+        }
+        return res.json({success: true, message: "Product removed from wishlist", wishlist: user.wishlist})
+    } catch (error) {
+        console.log(error)
+        return res.json({error, success: false});
     }
 }

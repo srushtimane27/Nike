@@ -166,7 +166,7 @@
 #gift-third-line {
     width: 20%;
     height: 40px;
-    /* border: 2px solid yellow; */
+    border: 2px solid yellow;
     display: flex;
     margin-left: 450px;
 
@@ -175,7 +175,7 @@
 #third-line-button {
     width: 100%;
     height: 50px;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     display: flex;
     flex-direction: row;
 }
@@ -183,10 +183,11 @@
 #button-one-shopexp {
     background-color: black;
     color: white;
-    width: 200px;
-    height: 60px;
+    width: 150px;
+    height: 40px;
     border-radius: 20px;
     margin-left: 200px;
+    font-size: 20px;
 }
 
 #button-two-shopexp {
@@ -194,14 +195,15 @@
     color: white;
     width: 50px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 18px;
     margin-left: 200px;
 }
 
 #feat-shop {
-    width: 100%;
+    width: 90%;
     height: 50px;
     /* border: 2px solid blue; */
+    margin: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -629,6 +631,9 @@
     #nav-two-right{
         margin-right: 40px;
     }
+    #user-name{
+        font-size: 15px;
+    }
     #nav-three{
         width: 100%;
         height: 50px;
@@ -654,9 +659,20 @@
         margin: auto;
         font-size: 14px;
     }
+    #gift-third-line{
+        margin: auto;
+    }
     #button-one-shopexp{
         width: 40px;
         display: none;
+    }
+    #third-line-button {
+        width: 50%;
+        height: 30px;
+    }
+    #button-one-shopexp{
+        
+
     }
     #button-two-shopexp{
         /* width: 70px; */

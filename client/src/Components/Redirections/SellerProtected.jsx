@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../AuthContext/AuthContextComponent";
 
-const SellerProtected = ({}) => {
+const SellerProtected = ({children}) => {
  const router = useNavigate();
  const {state} = useContext(AuthContext);
 
@@ -14,6 +14,7 @@ const SellerProtected = ({}) => {
         router("/login")
     }
  },[state])
+ return children;
 }
 
 export default SellerProtected;

@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
 const userSchema = new Schema({
     name: String,
@@ -6,8 +6,8 @@ const userSchema = new Schema({
     password: String,
     confirmPassword: String,
     role: String,
-    cart: [String],
-    wishlist: [String],
+    cart: [{type: mongoose.Schema.Types.ObjectId, ref: "Product"}],
+    wishlist: [{type: mongoose.Schema.Types.ObjectId, ref: "Product"}],
 })
 
 const UserSchema = model("User", userSchema);

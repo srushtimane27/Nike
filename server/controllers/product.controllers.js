@@ -1,9 +1,10 @@
 import ProductSchema from "../schemas/product.schema.js";
+import UserSchema from "../schemas/user.schema.js";
 
 export const addProduct = async (req,res) => {
     try {
         const { tags, name, type, colour, price } = req.body.productData;
-        // const { userId } = req.body;
+        const { userId } = req.body;
         if(!tags || !name || !type || !colour || !price) {
             return res.json({success: false, error: "All fields are required"})
         }
@@ -12,7 +13,8 @@ export const addProduct = async (req,res) => {
             name: name,
             type: type,
             colour: colour,
-            price: price
+            price: price,
+            user: userId,
         });
         await newProduct.save();
         return res.json({success: true, message: "Product Successfully Stored"})
@@ -30,3 +32,4 @@ export const getAllProducts = async (req,res) => {
         return res.json({error, success: false});
     }
 };
+
