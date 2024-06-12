@@ -55,13 +55,13 @@ const Register = () => {
         <form onSubmit={handleSubmit}>
           <label className='text'>Name : </label><br />
           <input className='box' type="text" name='name' required onChange={handleChange} /><br/>
-          <label>Email : </label><br />
+          <label  className='text'>Email : </label><br />
           <input className='box'  type="email" name='email' required onChange={handleChange} /><br/>
-          <label>Password : </label><br />
+          <label  className='text'>Password : </label><br />
           <input className='box'  type="password" name='password' required  onChange={handleChange}/><br />
-          <label>Confirm Password : </label><br />
+          <label  className='text'>Confirm Password : </label><br />
           <input className='box'  type="password" name='confirmPassword' required onChange={handleChange} /><br />
-          <select onChange={handleSelect}>
+          <select className='box' onChange={handleSelect}>
             <option value="buyer">Buyer</option>
             <option value="seller">Seller</option>
           </select><br />

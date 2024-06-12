@@ -129,13 +129,63 @@
 }
 .single-product{
     width: 30%;
-    height: 400px;
+    height: 600px;
     border: 4px solid red;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    width: 100%;
+    height: 330px;
+    margin: auto;
+    border: 2px solid blueviolet;
+}
+.pro-info{
+    width: 100%;
+    height: 270px;
+ 
+    border: 2px solid yellow;
+}
+.tags{
+    color: rgb(168, 16, 16);
+    
+}
+.name{
+    margin-top: 10px;
+}
+.type{
+    font-size: 15px;
+    color: grey;
+}
+.colour{
+    font-size: 15px;
+    color: grey;
+}
+.price{
+    margin-top: 10px;
 }
 .cart{
-    width: 100px;
+    width: 80%;
     height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.cart:hover{
+    background-color: white;
+    color: black;
+}
+.wish{
+    width: 80%;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.wish:hover{
+    background-color: black;
+    color: white;
 }
 .pro-img{
     height: 50%;

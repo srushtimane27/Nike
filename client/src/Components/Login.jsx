@@ -55,12 +55,12 @@ const Login = () => {
   return (
     <div className='screen'>
       <div className='login'>
-        <h1>Login</h1>
+        <h1 className='login-text'>Login</h1>
         <form onSubmit={handleSubmit}>
-          <label>Email:</label><br />
-          <input className='text' type="email" name='email' required onChange={handleChange} /><br />
-          <label>Password:</label><br />
-          <input className='text' type="password" name='password' required onChange={handleChange}/><br />
+          <label className='text'>Email:</label><br />
+          <input className='box' type="email" name='email' required onChange={handleChange} /><br />
+          <label className='text'>Password:</label><br />
+          <input className='box' type="password" name='password' required onChange={handleChange}/><br />
           <input className='login-button' type="submit" value="Login" />
         </form>
 

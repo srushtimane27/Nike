@@ -45,8 +45,8 @@ const Home = () => {
             <div>Find a Store |</div>
             <div>Help |</div>
             <div>Join Us |</div>
-            <div onClick={()=>registerRedirect()}>Sign In |</div>
-            {state?.user?.role? <div onClick={Logout}>Logout</div> : <div onClick={()=>loginRedirect()}>Login</div>}      
+            <div className='sign-in' onClick={()=>registerRedirect()}>Sign In |</div>
+            {state?.user?.role? <div className='log-in' onClick={Logout}>Logout</div> : <div className='log-in' onClick={()=>loginRedirect()}>Login</div>}      
             </div>
         </div>
         <div id="nav-two">

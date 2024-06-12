@@ -153,13 +153,16 @@ const Shop = () => {
               {allProducts.map((productObj) => (
                 // onClick={()=>redirect(productObj.id)}
                 <div className='single-product'>
-                  <h3>{productObj.tags}</h3>
-                  <h3>{productObj.name}</h3>
-                  <h3>{productObj.type}</h3>
-                  <h3>{productObj.colour}</h3>
-                  <h3>{productObj.price}</h3>
-                  <button className='cart' onClick={()=>addToCart(productObj?._id)}>Add To Cart</button>
-                  <button className='wish' onClick={()=>addToWishlist(productObj?._id)}>Add To Wishlist</button>
+                  <div className='img'></div>
+                  <div className='pro-info'>
+                  <div className='tags'>{productObj.tags}</div>
+                  <div className='name'>{productObj.name}</div>
+                  <div className='type'>{productObj.type}</div>
+                  <div className='colour'>{productObj.colour}</div>
+                  <div className='price'>MRP: {productObj.price}</div>
+                  <button className='cart' onClick={()=>addToCart(productObj?._id)}>Add To Cart</button><br />
+                  <button className='wish' onClick={()=>addToWishlist(productObj?._id)}>Add To Wishlist</button><br />
+                  </div>
                 </div>
               ))}
              </div> : <div>Loading...</div>}

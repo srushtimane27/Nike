@@ -5,31 +5,53 @@
 }
 .screen{
     width: 99%;
-    height: 800px;
+    height: 900px;
     margin: auto;
     border: 2px solid red;
+    background-color: rgb(245, 245, 245);;
+}
+.login-text{
+    margin: 30px 10px;
 }
 .login{
-    width: 50%;
-    height: 800px;
+    width: 30%;
+    height: 500px;
     border: 2px solid black;
     margin: auto;
-}
-.form{
-
+    background-color:rgb(212, 212, 218);;
+    margin-top: 40px;
+    margin-bottom: 200px;
 }
 .text{
-    width: 350px;
-    height: 40px;
+    margin-top: 50px;
+}
+.box{
+    width: 370px;
+    height: 50px;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 20px;
 
 }
 .login-button{
-    width: 80px;
-    height: 40px;
+    width: 50%;
+    height: 60px;
     background-color: black;
     color: white;
     margin-top: 25px;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 950px) {
+    .screen{
+        width: 100%;
+        height: auto;
+    }
+    .login{
+        width: 50%;
+        height: 500px;
+    }
+    .box{
+        width: 70%;
+        height: 60px;
+    }
 }
