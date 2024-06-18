@@ -3,12 +3,13 @@ import UserSchema from "../schemas/user.schema.js";
 
 export const addProduct = async (req,res) => {
     try {
-        const { tags, name, type, colour, price } = req.body.productData;
+        const {image, tags, name, type, colour, price } = req.body.productData;
         const { userId } = req.body;
-        if(!tags || !name || !type || !colour || !price) {
+        if(!image || !tags || !name || !type || !colour || !price) {
             return res.json({success: false, error: "All fields are required"})
         }
         const newProduct = new ProductSchema({
+            image: image,
             tags: tags,
             name: name,
             type: type,

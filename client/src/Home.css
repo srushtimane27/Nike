@@ -38,7 +38,7 @@
 #nav-one-right {
     width: 20%;
     height: 20px;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     display: flex;
     justify-content: space-between;
     margin-left: 1000px;
@@ -610,7 +610,7 @@
 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 480px) {
 
     #Screen {
         width: 100%;
@@ -620,9 +620,26 @@
     #nav-bar {
         width: 100%;
         height: 130px;
-        /* border: 5px solid yellow; */
+        border: 5px solid yellow;
     }
     #nav-one{
+        width: 100%;
+        height: 20px;
+        border: 2px solid red;
+    }
+    #nav-one-right{
+        width: 12%;
+        height: 8px;
+        display: flex;
+        margin-left: 80px;
+        font-size: 7px;
+        justify-content: space-between;
+    }
+    .sign-in{
+        display: flex;
+        font-size: 7px;
+    }
+    .find-store{
         display: none;
     }
     #nav-two{
@@ -637,9 +654,7 @@
     #nav-two-right{
         margin-right: 40px;
     }
-    .sign-in{
-        font-size: 15px;
-    }
+    
     #user-name{
         font-size: 15px;
     }

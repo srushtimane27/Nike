@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 const productSchema = new Schema({
+    image: String,
     tags: String,
     name: String,
     type: String,

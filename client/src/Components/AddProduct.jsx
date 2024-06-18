@@ -5,7 +5,7 @@ import AuthDirection from './Redirections/AuthDirection';
 import SellerProtected from './Redirections/SellerProtected';
 
 const AddProduct = () => {
-    const [productData, setProductData] = useState({tags:"",name: "",type: "", colour: "", price: "" })
+    const [productData, setProductData] = useState({image:"", tags:"",name: "",type: "", colour: "", price: "" })
     console.log(productData, "ProductData");
 
     const handleChange = (event) => {
@@ -31,6 +31,8 @@ const AddProduct = () => {
     <SellerProtected>
         <h1>Add Product</h1>
         <form onSubmit={handleSubmit}>
+            <label>Image:</label><br />
+            <input required name='image' onChange={handleChange}/><br />
             <label>Tags:</label><br />
             <input required name='tags' onChange={handleChange}/><br />
             <label>Product Name:</label><br />

@@ -42,9 +42,9 @@ const Home = () => {
         <div id="nav-bar">
         <div id="nav-one">
             <div id="nav-one-right">
-            <div>Find a Store |</div>
-            <div>Help |</div>
-            <div>Join Us |</div>
+            <div className='find-store'>Find a Store |</div>
+            <div className='find-store'>Help |</div>
+            <div className='find-store'>Join Us |</div>
             <div className='sign-in' onClick={()=>registerRedirect()}>Sign In |</div>
             {state?.user?.role? <div className='log-in' onClick={Logout}>Logout</div> : <div className='log-in' onClick={()=>loginRedirect()}>Login</div>}      
             </div>

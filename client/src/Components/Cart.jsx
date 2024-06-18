@@ -1,15 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from './AuthContext/AuthContextComponent'
 import axios from 'axios';
-
+import "./../cart.css"
 
 const Cart = () => {
-    const {state} = useContext(AuthContext);
-
+    const { state } = useContext(AuthContext);
     const [cartItems, setCartItems] = useState([]);
-    console.log(cartItems, "cartItems");
     const [loadingCart, setLoadingCart] = useState(true);
-    
 
     useEffect(() => {
         async function fetchCart(){
@@ -49,29 +46,29 @@ const Cart = () => {
         }
     }
 
-  return (
-    <div>
-        <h2>Cart Items</h2>
-        {loadingCart? (
-            <div>Loading Cart ...</div>
-        ) : cartItems.length ? (
-            <div style={{ display: 'flex', flexWrap: "wrap", justifyContent: 'space-around' }}>
-                {cartItems.map((productObj) => (
-                    <div key={productObj._id} style={{ width: "18%", border: "2px solid black", height: "300px" }}>
-                     <h3>{productObj.tags}</h3>
-                     <h3>{productObj.name}</h3>
-                     <h3>{productObj.type}</h3>
-                     <h3>{productObj.colour}</h3>
-                     <h3>{productObj.price}</h3>
-                     <button onClick={()=>removeFromcart(productObj._id)}>Remove Item From Cart</button>
-                    </div>
-                ))}
-            </div>
-        ) : (
-              <div>No Item In Cart</div>
-        )}
-    </div>
-  )
+    return (
+        <div className="cart-container">
+            <h2>Cart Items</h2>
+            {loadingCart ? (
+                <div className="loading-cart">Loading Cart ...</div>
+            ) : cartItems.length ? (
+                <div className="cart-items">
+                    {cartItems.map((productObj) => (
+                        <div key={productObj._id} className="cart-item">
+                            <h3>{productObj.tags}</h3>
+                            <h3>{productObj.name}</h3>
+                            <h3>{productObj.type}</h3>
+                            <h3>{productObj.colour}</h3>
+                            <h3>{productObj.price}</h3>
+                            <button onClick={() => removeFromcart(productObj._id)}>Remove Item From Cart</button>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <div className="no-items">No Item In Cart</div>
+            )}
+        </div>
+    );
 }
 
-export default Cart
+export default Cart;
