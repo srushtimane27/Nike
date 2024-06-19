@@ -227,50 +227,38 @@ const Home = () => {
                 </div>
             </div>
 
-            <div id="footer">
-                <div id="top-left">
-                    <div id="row-one">
-                        <ul>
-                            <li className="r1">FIND A STORE</li>
-                            <li>BECOME A MEMBER</li>
-                            <li>Send Us Feedback</li>
-                        </ul>
+
+            <div className='footer'>
+                <div className='footer-container'>
+                    <div className='boxes'>
+                        <h4>Resources</h4>
+                        <p>Find A Store</p>
+                        <p>Become A Member</p>
+                        <p>Sens Us Feedback</p>
                     </div>
-                    <div id="row-two">
-                        <ul>
-                            <li className="r1">GET HELP</li>
-                            <li className="r2">Order Status</li>
-                            <li className="r2">Delivery</li>
-                            <li className="r2">Returns</li>
-                            <li className="r2">Payment Options</li>
-                            <li className="r2">Contact Us On</li>
-                            <li className="r2">Nike.com Inquiries</li>
-                            <li className="r2">Contact Us On All Other</li>
-                            <li className="r2">Inquiries</li>
-                        </ul>
+                    <div className='boxes'>
+                        <h4>Help</h4>
+                        <p>Get Help</p>
+                        <p>Order Status</p>
+                        <p>Delivery</p>
+                        <p>Returns</p>
+                        <p>Payment Options</p>
+                        <p>Contact Us On Nike.com Inquiries</p>
+                        <p>Contact Us On All Other Inquiries</p>
                     </div>
-                    <div id="row-three">
-                        <ul>
-                            <li className="r1">ABOUT NIKE</li>
-                            <li className="r2">News</li>
-                            <li className="r2">Careers</li>
-                            <li className="r2">Investors</li>
-                            <li className="r2">Sustainability</li>
-                        </ul> 
+                    <div className='boxes'>
+                        <h4>Company</h4>
+                        <p>About Nike</p>
+                        <p>News</p>
+                        <p>Careers</p>
+                        <p>Investors</p>
+                        <p>Sustainability</p>
                     </div>
-                </div>
-                <div id="top-right">
-                    <div className="logo"><i className="fa-brands fa-twitter"></i></div>
-                    <div className="logo"><i className="fa-brands fa-facebook"></i></div>
-                    <div className="logo"><i className="fa-brands fa-youtube"></i></div>
-                    <div className="logo"><i className="fa-brands fa-instagram"></i></div>
                 </div>
             </div>
-            <div id="footer-two">
-                <div id="bottom-left">
-                    <i className="fa-solid fa-location-dot"></i> India
-                </div>         
+            <div id="footer-two">      
             <div id="bottom-right">
+                <div>© 2024 Nike, Inc. All rights reserved</div>
                 <div>Guides</div>
                 <div>Terms of Sale</div>
                 <div>Terms of Use</div>
