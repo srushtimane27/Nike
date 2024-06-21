@@ -11,12 +11,12 @@
 .screen{
     width: 100%;
     height: auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .nav-bar{
     width: 99%;
     height: 120px;
-    border: 4px solid yellow;
+    /* border: 4px solid yellow; */
     margin: auto;
     background-color: rgb(245, 245, 245);
 }
@@ -30,7 +30,7 @@
 .nav-one-right{
     width: 20%;
     height: 30px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
     margin-left: 1000px;
@@ -39,51 +39,51 @@
 .nav-two{
     width: 100%;
     height: 60px;
-    border: 2px solid rgb(0, 4, 255);
+    /* border: 2px solid rgb(0, 4, 255); */
     display: flex;
 }
 #nav-two-mid{
     width: 40%;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     margin-left: 40px;
 }
 #nav-two-mid>div{
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 #nav-two-right{
     width: 30%;
     margin-left: 150px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 #your-wishlist{
     width: auto;
     height: 30%;
     margin: auto;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
    font-size: 20px;
 }
 #your-cart{
     width: auto;
     height: 30%;
     margin: auto;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     font-size: 20px;
 }
 .Nike-pegasus{
     width: 99%;
     height: 100px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     margin-top: 20px;
 }
 .line-one{
     width: 200px;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
 }
 .line-two{
     height: 50px;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-top: 10px;
     
 }
@@ -91,11 +91,11 @@
     font-size: 23px;
     font-weight: bold;
     width: 26%;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
 }
 .line-two-right{
     width: 15%;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     display: flex;
     justify-content: space-between;
     margin-right: 20px;
@@ -103,7 +103,7 @@
 .products{
     width: 99%;
     height: auto;
-    border: 4px solid blue;
+    /* border: 4px solid blue; */
     margin: auto;
     margin-top: 10px;
     display: flex;
@@ -112,21 +112,21 @@
 .Side-bar{
     width: 20%;
     height: auto;
-    border: 2px solid magenta;
-    background-color: rgb(245, 245, 245);
+    /* border: 2px solid magenta; */
+    /* background-color: rgb(245, 245, 245); */
 }
 .side-first{
     width: 50%;
     margin: auto;
     height: 100px;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 .side-second{
     width: 50%;
     height: 500px;
     margin: auto;
     margin-top: 20px;
-    border: 2px solid rgb(94, 255, 0);
+    /* border: 2px solid rgb(94, 255, 0); */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -136,30 +136,30 @@
 }
 .lifestyle{
     font-size: 20px;
-    border: 2px solid blueviolet;
+    /* border: 2px solid blueviolet; */
     padding: 0px 14px 16px;
     font-weight: 550;
 }
 .running{
     margin-top: 20px;
     font-size: 18px;
-    border: 2px solid blueviolet;
+    /* border: 2px solid blueviolet; */
     padding: 0px 14px 16px;
     font-weight: 550;
 }
 .all-products{
     width: 80%;
     height: auto;
-    border: 5px solid pink;
+    /* border: 5px solid pink; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(245, 245, 245);
+    /* background-color: rgb(245, 245, 245); */
 }
 .single-product{
     width: 30%;
     height: 600px;
-    border: 4px solid red;
+    /* border: 4px solid red; */
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -168,13 +168,12 @@
     width: 100%;
     height: 330px;
     margin: auto;
-    border: 2px solid blueviolet;
+    border: 2px solid black;
 }
 .pro-info{
     width: 100%;
     height: 270px;
- 
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 .tags{
     color: rgb(168, 16, 16);
@@ -259,21 +258,21 @@
     }
     #nav-two-mid>div{
         width: 30px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         display: none;
     }
 
     #your-wishlist{
         width: 20%;
         font-size: 13px;
-        border: 2px solid green;
+        /* border: 2px solid green; */
         margin-left: 60px;
         font-weight: bold;
     }
     #your-cart{
         width: 20%;
         font-size: 13px;
-        border: 2px solid yellow;
+        /* border: 2px solid yellow; */
         font-weight: bold;
     }
     #nav-two-right{
@@ -307,7 +306,7 @@
     .side-second{
         font-size: 13px;
         height: 500px;
-        background-color: rgb(245, 245, 245);
+        /* background-color: rgb(245, 245, 245); */
     }
     .single-product{
         width: 40%;
