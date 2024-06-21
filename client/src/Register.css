@@ -53,10 +53,11 @@
     background-color: white;
     color: black;
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 480px){
     .screen{
-        width: 100%;
+        width: 99%;
         height: auto;
+        margin: auto;
     }
     .form{
         width: 60%;

@@ -111,8 +111,8 @@ const Shop = () => {
                 <div>Customise</div>
                 <div>SNKRS</div>
             </div>
-            <div onClick={()=>wishlistRedirect()}>Wishlist</div>
-            <div onClick={()=>cartRedirect()}>Your Cart</div>
+            <div id='your-wishlist' onClick={()=>wishlistRedirect()}>Wishlist</div>
+            <div id='your-cart' onClick={()=>cartRedirect()}>Your Cart</div>
             <div id='nav-two-right'><h3>Welcome - {state?.user?.name}</h3></div>
           </div>
 

@@ -39,8 +39,35 @@
 .nav-two{
     width: 100%;
     height: 60px;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 4, 255);
     display: flex;
+}
+#nav-two-mid{
+    width: 40%;
+    border: 2px solid pink;
+    margin-left: 40px;
+}
+#nav-two-mid>div{
+    border: 2px solid red;
+}
+#nav-two-right{
+    width: 30%;
+    margin-left: 150px;
+    border: 2px solid black;
+}
+#your-wishlist{
+    width: auto;
+    height: 30%;
+    margin: auto;
+    border: 2px solid yellow;
+   font-size: 20px;
+}
+#your-cart{
+    width: auto;
+    height: 30%;
+    margin: auto;
+    border: 2px solid yellow;
+    font-size: 20px;
 }
 .Nike-pegasus{
     width: 99%;
@@ -58,6 +85,7 @@
     justify-content: space-between;
     border: 2px solid red;
     margin-top: 10px;
+    
 }
 .line-two-left{
     font-size: 23px;
@@ -85,6 +113,7 @@
     width: 20%;
     height: auto;
     border: 2px solid magenta;
+    background-color: rgb(245, 245, 245);
 }
 .side-first{
     width: 50%;
@@ -97,7 +126,7 @@
     height: 500px;
     margin: auto;
     margin-top: 20px;
-    border: 2px solid red;
+    border: 2px solid rgb(94, 255, 0);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -194,4 +223,120 @@
 }
 .pro-title{
     margin-top: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .screen{
+        width: 98%;
+        height: 600px;
+        margin: auto;
+    }
+    .nav-bar{
+        width: 98%;
+        height: 90px;
+        margin: auto;
+    }
+    .nav-one{
+        width: 100%;
+        height: 30px;
+    }
+    .nav-one-right{
+        width: 50%;
+        height: 10px;
+        font-size: 10px;
+        margin-left: 200px;
+        
+    }
+    .nav-two{
+        width: 100%;
+        height: 30px;
+        font-size: 10px;
+    }
+    #nav-two-left{
+        width: 10%;
+        height: 25px;
+        margin-top: 3px;
+    }
+    #nav-two-mid>div{
+        width: 30px;
+        border: 2px solid red;
+        display: none;
+    }
+
+    #your-wishlist{
+        width: 20%;
+        font-size: 13px;
+        border: 2px solid green;
+        margin-left: 60px;
+        font-weight: bold;
+    }
+    #your-cart{
+        width: 20%;
+        font-size: 13px;
+        border: 2px solid yellow;
+        font-weight: bold;
+    }
+    #nav-two-right{
+        width: 40%;
+        height: auto;
+        margin-top: 3px;
+        margin-right: 3px;
+        margin-left: 0px;
+    }
+    .line-one{
+        font-size: 14px;
+    }
+    .line-two-left{
+        font-size: 14px;
+        width: 40%;
+    }
+    .line-two-right{
+        width: 30%;
+        font-size: 14px;
+        display: flex;
+        margin: auto;
+        margin-right: 0px;
+    }
+    .lifestyle{
+        font-size: 12px;
+        margin: auto;
+    }
+    .running{
+        font-size: 12px;
+    }
+    .side-second{
+        font-size: 13px;
+        height: 500px;
+        background-color: rgb(245, 245, 245);
+    }
+    .single-product{
+        width: 40%;
+    }
+    .type{
+        margin-top: 5px;
+       font-size: 13px; 
+    }
+    .colour{
+        margin-top: 5px;
+       font-size: 13px;
+    }
+    .price{
+        font-size: 13px;
+    }
+    .cart{
+        width: 70%;
+        height: 30px;
+    }
+    .cart:hover{
+        background-color: white;
+        color: black;
+    }
+    .wish{
+        width: 70%;
+        height: 30px;
+    }
+    .wish:hover{
+        background-color: black;
+        color: white;
+    }
 }
